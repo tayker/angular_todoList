@@ -1,0 +1,34 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    .btns-wrapper{
+        margin-bottom: 20px;
+        .btn{
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 5px 10px;
+            font-size: 18px;
+            color: #fff;
+            
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+            &-important{
+                background-color: #be0027;
+            }
+            &-done{
+                background-color: #00a98f;
+            }
+            &-in-progress{
+                background-color: #52565e;
+            }
+            &-all{
+                background-color: #0c3866;
+            }
+        }
+    }
+}

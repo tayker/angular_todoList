@@ -1,0 +1,13 @@
+<div class="view">
+    <input type="checkbox" class="toggle" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
+    <label class="list-item">
+        {{todo.title}}
+    </label>
+    <button class="destroy" (click)="removeTodo(todo)">
+        Delete
+    </button>
+    <button class="important"
+       (click)="todo.important = true">
+        i
+    </button>
+</div>

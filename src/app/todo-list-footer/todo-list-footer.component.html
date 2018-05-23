@@ -1,0 +1,22 @@
+<footer class="footer" *ngIf="todos.length > 0">
+    <div class="btns-wrapper">
+        <button class="btn btn-important"
+          (click)="sortByImportant()">
+           Important!
+        </button>
+        <button class="btn btn-done"
+          (click)="sortByDone()">
+           Done
+        </button>
+        <button class="btn btn-in-progress"
+          (click)="sortByInProgress()">
+           In progress
+        </button>
+        <button class="btn btn-all"
+           (click)="sortByAll()">
+            All
+        </button>
+    </div>
+    <span class="todo-count"><strong>{{todos.length}}</strong>
+        {{todos.length == 1 ? 'item' : 'items'}} left</span>
+</footer>

@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    justify-content: center;
+    .todo-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 600px;
+
+        li {
+            list-style: none;
+            width: 40%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            transition: .3s;
+
+            &.completed {
+                background-color: rgba(#00a98f, 0.3);
+            }
+        }
+    }
+}

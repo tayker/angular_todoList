@@ -1,0 +1,13 @@
+<section class="main" *ngIf="todos.length > 0">
+    <ul class="todo-list">
+        <ng-container *ngFor='let todo of todos'>
+            <li [class.completed]="todo.complete" *ngIf='todo.sorted'>
+                <app-todo-list-item
+                    [todo]="todo"
+                    (toggleComplete)="onToggleComplete($event)"
+                    (remove)="onRemoveTodo($event)">
+                </app-todo-list-item>
+            </li>
+        </ng-container>
+    </ul>
+</section>
