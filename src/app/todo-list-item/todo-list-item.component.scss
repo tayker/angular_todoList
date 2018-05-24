@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     .toggle {
         appearance: none;
         width: 30px;
@@ -48,5 +48,24 @@
     .list-item {
         font-size: 22px;
         color: #777;
+    }
+    .important{
+        border: none;
+        color: #fff;
+        border-radius: 3px;
+        padding: 0 5px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        outline: none;
+        transition: .3s;
+        
+        &:hover{
+            background-color: #fe230a;
+        }
+        &.active{
+            background-color: #d52b1d;
+        }
     }
 }

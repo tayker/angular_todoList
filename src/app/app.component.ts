@@ -23,6 +23,7 @@ export class AppComponent {
     
     onToggleTodoComplete(todo){
         this.todoDataService.toggleTodoComplete(todo);
+        console.log(this.todoDataService);
         localStorage.setItem('todo', JSON.stringify(this.todoDataService));
     }
     
@@ -31,9 +32,15 @@ export class AppComponent {
         localStorage.setItem('todo', JSON.stringify(this.todoDataService));
     }
     
+    onToggleTodoImportant(todo){
+        this.todoDataService.toggleTodoImportant(todo);
+        console.log(this.todoDataService);
+    }
+    
     get todos(){
         return this.todoDataService.getAllTodos();
     }
+    
     ngOnInit(){
         if(localStorage.getItem('todo') !== null){
             let storage = JSON.parse(localStorage.getItem('todo'));

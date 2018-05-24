@@ -16,6 +16,7 @@
             padding: 15px;
             border-radius: 4px;
             transition: .3s;
+            position: relative;
 
             &.completed {
                 background-color: rgba(#00a98f, 0.3);

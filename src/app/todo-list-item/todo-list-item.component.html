@@ -7,7 +7,8 @@
         Delete
     </button>
     <button class="important"
-       (click)="todo.important = true">
+       (click)="toggleTodoImportant(todo)"
+       [class.active]="todo.important">
         i
     </button>
 </div>

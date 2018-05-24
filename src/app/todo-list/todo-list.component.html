@@ -5,7 +5,8 @@
                 <app-todo-list-item
                     [todo]="todo"
                     (toggleComplete)="onToggleComplete($event)"
-                    (remove)="onRemoveTodo($event)">
+                    (remove)="onRemoveTodo($event)"
+                    (toggleImportant)="onToggleImportant($event)">
                 </app-todo-list-item>
             </li>
         </ng-container>
