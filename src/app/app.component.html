@@ -4,6 +4,7 @@
         [todos]="todos"
         (toggleComplete)="onToggleTodoComplete($event)"
         (remove)="onRemoveTodo($event)"
+        (toggleImportant)="onToggleTodoImportant($event)"
     ></app-todo-list>
     <app-todo-list-footer
         [todos]="todos"

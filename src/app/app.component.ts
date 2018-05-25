@@ -34,7 +34,7 @@ export class AppComponent {
     
     onToggleTodoImportant(todo){
         this.todoDataService.toggleTodoImportant(todo);
-        console.log(this.todoDataService);
+        localStorage.setItem('todo', JSON.stringify(this.todoDataService));
     }
     
     get todos(){
