@@ -17,6 +17,12 @@ export class AppComponent {
     }
     
     onAddTodo(todo: Todo){
+        let i;
+        for(i=0;i < this.todoDataService.todos.length;i++){
+            if(this.todoDataService.todos[i].title == todo.title || !todo.title){
+                return
+            }
+        }
         this.todoDataService.addTodo(todo);
         localStorage.setItem('todo', JSON.stringify(this.todoDataService));
     }

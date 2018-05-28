@@ -6,6 +6,7 @@ import { Todo } from '../todo';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss']
 })
+
 export class TodoListComponent implements OnInit {
 
     @Input()
