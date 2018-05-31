@@ -21,6 +21,8 @@ export class TodoListItemComponent implements OnInit {
     
     constructor() { }
 
+    full = false;
+    
     toggleTodoComplete(todo: Todo){
         this.toggleComplete.emit(todo);
     }
@@ -32,6 +34,11 @@ export class TodoListItemComponent implements OnInit {
     toggleTodoImportant(todo: Todo){
         this.toggleImportant.emit(todo);
         console.log(this.toggleImportant)
+    }
+    
+    showFullTodo(full){
+        
+        return this.full = !this.full
     }
     
     ngOnInit() {

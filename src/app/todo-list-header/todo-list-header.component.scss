@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Jua');
 .header {
     flex-direction: column;
     align-items: center;
     display: flex;
     justify-content: center;
-    .new-todo {
+    
+    h1{
+        font-size: 34px;
+        color: #629aa9;
+        font-family: 'Jua', sans-serif;
+        font-weight: 100;
+        margin: 10px;
+    }
+    .new-todo, .new-task {
         padding: 5px 10px;
         border: 1px solid transparent;
         box-shadow: 0 0 2px 1px #777;
@@ -12,11 +21,32 @@
         position: relative;
         font-size: 34px;
         color: #777;
+        margin-bottom: 10px;
 
         &:hover,
         &:focus {
             box-shadow: none;
             border-bottom: 1px solid #777;
+        }
+    }
+    .new-task{
+        resize: none;
+    }
+    .btn-add-todo{
+        background-color: #88aca1;
+        color: #fff;
+        border: none;
+        font-size: 24px;
+        padding: 5px 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: 'Jua', sans-serif;
+    }
+}
+@media screen and (max-width: 460px){
+    .header{
+        .new-todo, .new-task{
+            font-size: 26px;
         }
     }
 }

@@ -1,8 +1,13 @@
 <div class="view">
     <input type="checkbox" class="toggle" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
-    <label class="list-item">
-        {{todo.title}}
-    </label>
+    <div class="task-wrapper">
+        <div class="list-item" (click)="showFullTodo()" title="{{todo.title}}">
+            {{todo.title}}
+        </div>
+        <div class="task-description" [class.active]="full">
+            {{todo.task}}
+        </div>
+    </div>
     <button class="destroy" (click)="removeTodo(todo)">
         Delete
     </button>
