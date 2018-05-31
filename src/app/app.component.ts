@@ -24,27 +24,30 @@ export class AppComponent {
             }
         }
         this.todoDataService.addTodo(todo);
-        localStorage.setItem('todo', JSON.stringify(this.todoDataService));
+        this.setToLocalStorage()
     }
     
     onToggleTodoComplete(todo){
         this.todoDataService.toggleTodoComplete(todo);
-        console.log(this.todoDataService);
-        localStorage.setItem('todo', JSON.stringify(this.todoDataService));
+        this.setToLocalStorage()
     }
     
     onRemoveTodo(todo){
         this.todoDataService.deleteTodoById(todo.id);
-        localStorage.setItem('todo', JSON.stringify(this.todoDataService));
+        this.setToLocalStorage()
     }
     
     onToggleTodoImportant(todo){
         this.todoDataService.toggleTodoImportant(todo);
-        localStorage.setItem('todo', JSON.stringify(this.todoDataService));
+        this.setToLocalStorage();
     }
     
     get todos(){
         return this.todoDataService.getAllTodos();
+    }
+    
+    setToLocalStorage(){
+        return localStorage.setItem('todo', JSON.stringify(this.todoDataService));
     }
     
     ngOnInit(){

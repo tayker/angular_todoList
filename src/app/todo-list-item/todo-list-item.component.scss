@@ -54,19 +54,22 @@
         font-size: 22px;
         color: #777;
         cursor: pointer;
-//        overflow: hidden;
         max-width: 350px;
         word-wrap: break-word;
+        text-align: center;
     }
     .task-description{
-        display: none;
+        opacity: 0;
         max-width: 350px;
-        font-size: 20px;
         color: #999;
         word-wrap: break-word;
+        transition: .2s;
+        font-size: 0;
+        padding: 10px 0;
         
         &.active{
-            display: block;
+            opacity: 1;
+            font-size: 20px;
         }
     }
     .important{
