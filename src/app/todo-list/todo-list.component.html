@@ -1,6 +1,6 @@
 <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">
-        <ng-container *ngFor='let todo of todos'>
+        <ng-container *ngFor='let todo of todos.reverse()'>
             <li [class.completed]="todo.complete" *ngIf='todo.sorted'>
                 <app-todo-list-item
                     [todo]="todo"

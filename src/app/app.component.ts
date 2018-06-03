@@ -19,7 +19,7 @@ export class AppComponent {
     onAddTodo(todo: Todo){
         let i;
         for(i=0;i < this.todoDataService.todos.length;i++){
-            if(this.todoDataService.todos[i].title == todo.title || !todo.title){
+            if(this.todoDataService.todos[i].title == todo.title || !todo.title || !todo.task){
                 return
             }
         }
