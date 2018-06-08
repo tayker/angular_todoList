@@ -37,11 +37,6 @@ export class AppComponent {
         this.setToLocalStorage()
     }
     
-    onToggleTodoImportant(todo){
-        this.todoDataService.toggleTodoImportant(todo);
-        this.setToLocalStorage();
-    }
-    
     get todos(){
         return this.todoDataService.getAllTodos();
     }

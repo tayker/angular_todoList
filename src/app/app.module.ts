@@ -6,6 +6,7 @@ import { TodoListHeaderComponent } from './todo-list-header/todo-list-header.com
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { TodoListFooterComponent } from './todo-list-footer/todo-list-footer.component';
+import { AppImportantDirective } from './todo-list-item.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TodoListFooterComponent } from './todo-list-footer/todo-list-footer.com
     TodoListHeaderComponent,
     TodoListComponent,
     TodoListItemComponent,
-    TodoListFooterComponent
+    TodoListFooterComponent,
+    AppImportantDirective
   ],
   imports: [
       BrowserModule,

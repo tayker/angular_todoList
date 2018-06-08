@@ -51,11 +51,4 @@ export class TodoDataService {
         });
         return updatedTodo;
     }
-    
-    toggleTodoImportant(todo: Todo){
-        let importantTodo = this.updateTodoById(todo.id, {
-            important: !todo.important
-        });
-        return importantTodo;
-    }
 }

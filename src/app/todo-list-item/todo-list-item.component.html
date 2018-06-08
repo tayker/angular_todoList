@@ -12,8 +12,9 @@
         Delete
     </button>
     <button class="important"
-       (click)="toggleTodoImportant(todo)"
-       [class.active]="todo.important">
+     [todo]="todo"
+      appImportant
+       >
         i
     </button>
 </div>
